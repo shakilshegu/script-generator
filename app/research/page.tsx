@@ -30,16 +30,13 @@ export default function ResearchPage() {
     setData(null)
 
     try {
-      const response = await fetch(
-        'http://content-automation-alb-451510707.us-east-1.elb.amazonaws.com/api/v1/research',
-        {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify({ topic }),
-        }
-      )
+      const response = await fetch('/api/research', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ topic }),
+      })
 
       const result = await response.json()
 

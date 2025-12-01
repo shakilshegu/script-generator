@@ -48,16 +48,13 @@ export default function ScriptGeneratorPage() {
     setData(null)
 
     try {
-      const response = await fetch(
-        'http://content-automation-alb-451510707.us-east-1.elb.amazonaws.com/api/v1/script',
-        {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify({ niche, topic, platform }),
-        }
-      )
+      const response = await fetch('/api/script', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ niche, topic, platform }),
+      })
 
       const result = await response.json()
 

@@ -44,16 +44,13 @@ export default function TopicsPage() {
     setData(null)
 
     try {
-      const response = await fetch(
-        'http://content-automation-alb-451510707.us-east-1.elb.amazonaws.com/api/v1/topics',
-        {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify({ niche }),
-        }
-      )
+      const response = await fetch('/api/topics', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ niche }),
+      })
 
       const result = await response.json()
 
