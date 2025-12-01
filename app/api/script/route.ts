@@ -5,7 +5,7 @@ export async function POST(request: NextRequest) {
     const body = await request.json()
 
     const response = await fetch(
-      'http://content-automation-alb-451510707.us-east-1.elb.amazonaws.com/api/v1/script',
+      'https://d150xtu6gm3xvy.cloudfront.net/api/v1/script',
       {
         method: 'POST',
         headers: {
