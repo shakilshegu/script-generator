@@ -1,0 +1,35 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #6366f1;
+  --color-secondary: #8b5cf6;
+  --color-accent: #ec4899;
+}
+
+body {
+  @apply bg-gray-50 text-gray-900;
+}
+
+.gradient-bg {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.card-hover {
+  @apply transition-all duration-300 hover:shadow-xl hover:-translate-y-1;
+}
+
+.btn-primary {
+  @apply bg-primary hover:bg-primary/90 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-200 hover:shadow-lg;
+}
+
+.btn-secondary {
+  @apply bg-white hover:bg-gray-50 text-gray-900 font-semibold py-3 px-6 rounded-lg border-2 border-gray-200 transition-all duration-200 hover:shadow-lg;
+}
+
+.input-field {
+  @apply w-full px-4 py-3 rounded-lg border-2 border-gray-200 focus:border-primary focus:outline-none transition-colors;
+}
+
+.copy-button {
+  @apply absolute top-2 right-2 bg-white hover:bg-gray-100 text-gray-700 px-3 py-1 rounded-md text-sm font-medium transition-all duration-200 hover:shadow-md;
+}
